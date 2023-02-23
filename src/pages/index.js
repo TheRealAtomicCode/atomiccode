@@ -1,47 +1,25 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import styles from '@/styles/Home.module.css';
+import Name from '../Components/Name';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
 
-  const [name, setName] = useState('ATOMIC CODE');
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
-  const ATOMICCODE = 'ATOMIC CODE';
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setPosition({ x: event.clientX, y: event.clientY });
+    };
 
-  const changeName = () => {
+    window.addEventListener('mousemove', handleMouseMove);
 
-    let iterations = 1 / 3;
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
-    const interval = setInterval(() => {
-      const word = name.split('')
-        .map((letter, index) => {
-          if (index < iterations) {
-            return ATOMICCODE[index];
-          }
-
-          return letters[Math.floor(Math.random() * 26)];
-        })
-        .join('');
-      setName(word);
-
-      if (iterations >= ATOMICCODE.length) clearInterval(interval);
-
-      iterations += 1;
-    }, 30);
-
-  };
-
-  // document.querySelector('h1').onmouseover = event => {
-  //   event.target.innerText = event.target.innerText.split('')
-  //     .map(letter => letters[Math.floor(Math.random() * 26)])
-  //     .join('');
-  // };
 
   return (
     <>
@@ -53,9 +31,12 @@ export default function Home() {
       </Head>
       <main className="bg-black">
 
-        <div className='flex h-screen items-center justify-center'>
-          <h1 onMouseOver={changeName} className='text-white text-4xl'>{name}</h1>
-        </div>
+        <div id='blob' className="absolute bg-red-500 w-12 h-12 rounded-full" style={{
+          left: position.x - 20,
+          top: position.y - 20,
+        }}></div>
+
+        <Name />
 
       </main>
     </>
