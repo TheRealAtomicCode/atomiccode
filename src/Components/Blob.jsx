@@ -10,7 +10,7 @@ export default function Blob() {
     useEffect(() => {
         const handleMouseMove = (event) => {
             const x = event.clientX;
-            const y = event.clientY;
+            const y = event.pageY;
             const { left, top } = blobRef.current.getBoundingClientRect();
             const dx = x - (left + 100);
             const dy = y - (top + 100);

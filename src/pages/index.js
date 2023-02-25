@@ -3,33 +3,12 @@ import Name from '../Components/Name';
 import Nav from '../Components/Nav';
 import Blob from '../Components/Blob';
 
+import me from '../../public/landddd2.jpg';
+
 import { useState, useRef, useEffect } from 'react';
 
 
 export default function Home() {
-
-  const blobRef = useRef(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [rotation, setRotation] = useState(0);
-
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const x = event.clientX;
-      const y = event.clientY;
-      const { left, top } = blobRef.current.getBoundingClientRect();
-      const dx = x - (left + 100);
-      const dy = y - (top + 100);
-      setPosition({ x: x - dx / 4, y: y - dy / 4 });
-      setRotation(Math.atan2(dy, dx) * (10 / Math.PI));
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
 
   return (
     <>
@@ -44,20 +23,26 @@ export default function Home() {
       <main style={{ overflow: 'clip' }}>
 
         <Nav />
-
-        <div
-          id="blob"
-          ref={blobRef}
-          className="absolute bg-gradient-to-r blur-3xl from-blue-400 to-purple-500 w-96 h-72 rounded-full animate-rotate-custom duration-20s infinite"
-          style={{
-            transform: `translate(${position.x - 190}px, ${position.y - 150}px) rotate(${360}deg)`,
-            transition: 'transform 0.3s ease-out',
-          }}
-        ></div>
-
         <Blob />
-
         <Name />
+
+        <div className='relative text-white text-xl'>
+          <h2 className='text-center'>About me</h2>
+          <div className='grid grid-cols-2 text-sm font-light text-justify m-2'>
+            <p className="mr-2">I am a self-taught web developer with experience in the MERN stack (MongoDB, Express, React and NodeJS). I've always had an interest in Computer science, from Quantum Computing to simply replacing a ram stick on your motherboard, because your desktop won’t turn on, and is only making a beeping noise.
+
+              What is my main goal? Web development. I'm currently working on a SaaS (software as a service), similar to Sales Force, but more user friendly, with a minimum training required to use. I have a few personal projects made, but I currently work in technical support with the hopes of becoming a full time developer, rather than just coding in my free time.
+
+              What I believe programming is all about: short answer is - the customer. People don't always want to figure stuff out for themselves, and don't feel like doing things on their own, therefore the job of a programmer is to assume the customer:
+
+              1 - does not understand
+
+              2 - does not feel like doing it
+
+              So, we automate everything and make it simple. They want to sign in? Make it possible for them to sign in with Google rather than remembering passwords. They forgot their password? Enable use of LastPass. They get asked the dreaded question - “are you a robot?”, simply include just the click of a button that follows their cursor, rather than clicking on annoying traffic lights and street signs.</p>
+            <img src='me.jpeg' />
+          </div>
+        </div>
 
       </main>
     </>
