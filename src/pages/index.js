@@ -27,19 +27,12 @@ export default function Home() {
         <Name />
 
         <div className='relative text-white text-xl'>
-          <h2 className='text-center'>About me</h2>
-          <div className='grid grid-cols-2 text-sm font-light text-justify m-2'>
-            <p className="mr-2">I am a self-taught web developer with experience in the MERN stack (MongoDB, Express, React and NodeJS). I've always had an interest in Computer science, from Quantum Computing to simply replacing a ram stick on your motherboard, because your desktop won’t turn on, and is only making a beeping noise.
-
-              What is my main goal? Web development. I'm currently working on a SaaS (software as a service), similar to Sales Force, but more user friendly, with a minimum training required to use. I have a few personal projects made, but I currently work in technical support with the hopes of becoming a full time developer, rather than just coding in my free time.
-
-              What I believe programming is all about: short answer is - the customer. People don't always want to figure stuff out for themselves, and don't feel like doing things on their own, therefore the job of a programmer is to assume the customer:
-
-              1 - does not understand
-
-              2 - does not feel like doing it
-
-              So, we automate everything and make it simple. They want to sign in? Make it possible for them to sign in with Google rather than remembering passwords. They forgot their password? Enable use of LastPass. They get asked the dreaded question - “are you a robot?”, simply include just the click of a button that follows their cursor, rather than clicking on annoying traffic lights and street signs.</p>
+          <h2 className='text-center text-3xl mb-12'>📖 About me</h2>
+          <div className='grid grid-cols-2 text-justify m-4'>
+            <div className="mr-4 ">
+              <p className="text-center first-letter:text-xl">👋 Hi, I'm Qader Baghi</p>
+              <p className="mt-12 font-light">I Speciallize in Javascript, Node.JS, React, Next, Node.JS, MongoDB and PostgreSQL</p>
+            </div>
             <img src='me.jpeg' />
           </div>
         </div>
