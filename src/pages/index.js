@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Name from '../Components/Name';
+import Nav from '../Components/Nav';
+import Blob from '../Components/Blob';
 
 import { useState, useRef, useEffect } from 'react';
 
@@ -37,19 +39,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-black overflow-clip">
+
+      <main style={{ overflow: 'clip' }}>
+
+        <Nav />
 
         <div
           id="blob"
           ref={blobRef}
-          className="absolute bg-gradient-to-r blur-3xl from-blue-400 to-purple-500 w-96 h-72 rounded-full"
+          className="absolute bg-gradient-to-r blur-3xl from-blue-400 to-purple-500 w-96 h-72 rounded-full animate-rotate-custom duration-20s infinite"
           style={{
             transform: `translate(${position.x - 190}px, ${position.y - 150}px) rotate(${360}deg)`,
             transition: 'transform 0.3s ease-out',
           }}
         ></div>
-        <div id="blur"></div>
 
+        <Blob />
 
         <Name />
 
