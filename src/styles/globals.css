@@ -19,7 +19,9 @@ h1 {
     font-family: "Space Mono", monospace;
 }
 
-@keyframes rotate {
+
+
+@keyframes rotation {
     from {
         transform: rotate(0deg);
     }
@@ -29,6 +31,9 @@ h1 {
     }
 }
 
+#animation-rotate {
+    animation: rotation 12s infinite linear;
+}
 
 /* #blur {
     height: 100%;

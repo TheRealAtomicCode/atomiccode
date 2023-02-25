@@ -1,21 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
 
-
 export default function Blob() {
-
     const blobRef = useRef(null);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [rotation, setRotation] = useState(0);
+    const [position, setPosition] = useState({ x: 180, y: 190 });
 
     useEffect(() => {
         const handleMouseMove = (event) => {
             const x = event.clientX;
-            const y = event.pageY;
+            const y = event.clientY;
             const { left, top } = blobRef.current.getBoundingClientRect();
             const dx = x - (left + 100);
             const dy = y - (top + 100);
-            setPosition({ x: x - dx / 4, y: y - dy / 4 });
-            setRotation(Math.atan2(dy, dx) * (10 / Math.PI));
+            setPosition({ x: x - dx / 2, y: y - dy / 2 });
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -25,15 +21,21 @@ export default function Blob() {
         };
     }, []);
 
+    // setInterval(() => {
+    //     setRotate(rotate + 10);
+    //     if (rotate === 360) {
+    //         setRotate(0);
+    //     }
+    // }, 50);
 
     return (
         <div
             id="blob"
             ref={blobRef}
-            className="absolute bg-gradient-to-r blur-3xl from-blue-400 to-purple-500 w-96 h-72 rounded-full animate-rotate-custom duration-20s infinite"
+            className="fixed bg-gradient-to-r blur-3xl from-blue-400 to-purple-500 w-96 h-72 rounded-full animate-rotate-custom"
             style={{
-                transform: `translate(${position.x - 190}px, ${position.y - 150}px) rotate(${360}deg)`,
-                transition: 'transform 0.3s ease-out',
+                transform: `translate(${position.x - 90}px, ${position.y - 90}px)  scale(1.2)`, // edit the scale() value to adjust the morphing
+                transition: 'transform 0.8s ease-out',
             }}
         ></div>
     );
