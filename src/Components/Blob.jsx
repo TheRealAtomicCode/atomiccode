@@ -28,7 +28,7 @@ export default function Blob() {
     return (
         <div
             id="blob"
-            className="absolute bg-gradient-to-r blur-3xl from-blue-400 to-purple-500 w-96 h-72 rounded-full animate-rotate-custom"
+            className="absolute bg-gradient-to-r blur-3xl from-blue-500 to-sky-400 w-96 h-72 rounded-full animate-rotate-custom"
             style={{
                 transform: `translate(${position.x - 120}px, ${position.y - 190}px)  scale(1.2)`, // edit the scale() value to adjust the morphing
                 transition: 'transform 0.8s ease-out',

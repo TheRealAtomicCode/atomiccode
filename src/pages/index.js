@@ -3,10 +3,7 @@ import Name from '../Components/Name';
 import Nav from '../Components/Nav';
 import Blob from '../Components/Blob';
 
-import me from '../../public/landddd2.jpg';
-
 import { useState, useRef, useEffect } from 'react';
-
 
 export default function Home() {
 
@@ -27,13 +24,15 @@ export default function Home() {
         <Name />
 
         <div className='relative text-white text-xl'>
-          <h2 className='text-center text-3xl mb-12'>📖 About me</h2>
+          {/* <h2 className='text-center text-3xl mb-12'>📖 About me</h2> */}
           <div className='grid grid-cols-2 text-justify m-4'>
-            <div className="mr-4 ">
-              <p className="text-center first-letter:text-xl">👋 Hi, I'm Qader Baghi</p>
-              <p className="mt-12 font-light">I Speciallize in Javascript, Node.JS, React, Next, Node.JS, MongoDB and PostgreSQL</p>
+
+            <div className='flex items-center h-full mr-4 sm:ml-4 md:ml-16'>
+              <p className="font-light">Hi, I'm Qader Baghi, and i'm a self taught web and mobile developer.</p>
             </div>
-            <img src='me.jpeg' />
+            <div className='flex justify-center'>
+              <img className='w-32 sm:w-60 rounded-md' src='me.png' />
+            </div>
           </div>
         </div>
 
