@@ -36,11 +36,33 @@ h1 {
 }
 
 #word-1 {
-    position: relative;
-    left: 1rem;
+    position: absolute;
+    transform: rotate(-30deg) scaleY(1.5) translate(-.2rem, -2rem);
+    transition: 0.4s;
+}
 
-    transform: rotate(20deg) translateX(20px);
-    transition: all 1s;
+#word-2 {
+    position: absolute;
+    transform: rotate(-30deg) scaleY(1.2) translate(3rem, -.8rem);
+    transition: 0.4s;
+}
+
+#word-3 {
+    position: absolute;
+    transform: rotate(-30deg) scaleY(1.2) translate(6rem, -.2rem);
+    transition: all 0.4s;
+}
+
+#word-4 {
+    position: absolute;
+    transform: rotate(-30deg) scaleY(1.2) translate(12rem, 3rem);
+    transition: 0.4s;
+}
+
+#word-5 {
+    position: relative;
+    transform: rotate(-30deg) scaleY(1.2) translate(14rem, 4rem);
+    transition: 0.4s;
 }
 
 /* #blur {
