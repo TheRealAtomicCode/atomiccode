@@ -2,59 +2,11 @@ import Head from 'next/head';
 import Name from '../Components/Name';
 import Nav from '../Components/Nav';
 import Blob from '../Components/Blob';
+import Intro from '../Components/Intro';
 
 import { useState, useRef, useEffect } from 'react';
 
 export default function Home() {
-
-  const pRef = useRef();
-
-  // useEffect(() => {
-  //   const handleHover = (e) => {
-  //     console.log('lol');
-  //   };
-
-  //   lettersRef.addEventListener('onmouseover', handleHover);
-  // }, []);
-
-  const handleHover = (e) => {
-
-    if (e.target.localName === 'p' || e.target.localName === 'span') {
-
-      //   const words = e.target.innerText;
-      //   const splitWords = words.split(' ');
-      //   const spans = splitWords.map((word, index) => `<span id="word-${index + 1}">${word} </span>`);
-
-      //   e.target.innerHTML = '';
-      //   spans.forEach(span => {
-      //     e.target.innerHTML += span;
-      //   });
-
-      console.log();
-
-      const spans = pRef.current.childNodes;
-
-      spans.forEach((span, index) => {
-        span.id = `word-${index + 1}`;
-
-      });
-
-    }
-  };
-
-  const handleRemoveHover = (e) => {
-    if (e.target.localName === 'p' || e.target.localName === 'span') {
-      const spans = pRef.current.childNodes;
-
-      spans.forEach((span) => {
-        span.id = '';
-
-      });
-    }
-
-  };
-
-
 
   return (
     <>
@@ -71,25 +23,7 @@ export default function Home() {
         <Nav />
         <Blob />
         <Name />
-
-        <div className='relative text-white text-xl'>
-          {/* <h2 className='text-center text-3xl mb-12'>📖 About me</h2> */}
-          <div className='sm:grid sm:grid-cols-2 text-center sm:text-justify m-4'>
-
-            <div className='flex items-center h-full mr-4 sm:ml-4 md:ml-16'>
-              <p ref={pRef} onMouseOver={handleHover} onMouseOut={handleRemoveHover} className="font-light">
-                <span id="xword-1">Hi, I'm Qader Baghi, </span>
-                <span id="xword-1">and i'm a self taught </span>
-                <span id="xword-1">web and mobile developer, </span>
-                <span id="xword-1">oh and I also do </span>
-                <span id="xword-1">youtube tutorials.</span>
-              </p>
-            </div>
-            <div className='flex justify-center'>
-              <img className='w-44 mt-10 sm:mt-0 sm:w-60 rounded-md' src='me.png' />
-            </div>
-          </div>
-        </div>
+        <Intro />
 
       </main>
     </>

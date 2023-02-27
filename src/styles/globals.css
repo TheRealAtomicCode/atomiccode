@@ -50,7 +50,7 @@ h1 {
 #word-3 {
     position: absolute;
     transform: rotate(-30deg) scaleY(1.2) translate(6rem, -.2rem);
-    transition: all 0.4s;
+    transition: 0.4s;
 }
 
 #word-4 {
