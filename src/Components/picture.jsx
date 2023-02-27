@@ -4,7 +4,7 @@ export default function Intro() {
         <div className='relative text-white text-xl'>
             <div className='sm:grid sm:grid-cols-2 text-center sm:text-justify m-4'>
                 <div className='flex items-center h-full mr-4 sm:ml-4 md:ml-16'>
-                    <p className="font-light text-3xl">
+                    <p className="font-light">
                         Hi, I'm Qader Baghi,
                         and i'm a self taught
                         web and mobile developer,

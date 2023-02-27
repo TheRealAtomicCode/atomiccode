@@ -24,6 +24,40 @@ export default function Home() {
         <Blob />
         <Name />
         <Intro />
+        <div className="relative text-white container mx-auto px-4">
+          {/* Design section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-center mb-4">Design</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <img src="html.png" alt="HTML icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="css.svg" alt="CSS icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="tailwind.png" alt="Tailwind icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="figma.png" alt="Figma icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+            </div>
+          </div>
+
+          {/* Front-end section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-center mb-4">Front-end (Web)</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <img src="js.svg" alt="JavaScript icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="ts.png" alt="TypeScript icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="react.svg" alt="React icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="next.png" alt="Next.js icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+            </div>
+          </div>
+
+          {/* Backend section */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-center mb-4">Backend</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <img src="node.png" alt="Node.js icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="postgresql.png" alt="PostgreSQL icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="mongo.svg" alt="MongoDB icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+              <img src="firebase.svg" alt="Firebase icon" className="w-20 md:w-20 lg:w-24 max-w-full" />
+            </div>
+          </div>
+        </div>
 
       </main>
     </>
