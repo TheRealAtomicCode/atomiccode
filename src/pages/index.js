@@ -49,11 +49,70 @@ export default function Home() {
 
           <ParallaxLayer offset={4}>
 
-            <div>
+            <div className='relative'>
               <h2 className="text-3xl text-center text-white mb-12">My youtube channel</h2>
               <div className="grid grid-cols-12 gap-4 mx-2">
+
                 <div className='col-span-12 w-full md:col-span-8 bg-white'>
                   <iframe className='w-full h-80 md:h-96 lg:h-[34rem] rounded-none' src="https://www.youtube.com/embed/UgIwjLg4ONk" title="The Parallax Effect // 5 Minute WebDev Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div className='col-span-12 md:col-span-4 bg-gray-800 w-full h-80 md:h-auto md:overflow-y-auto rounded-lg'>
+                  <h3 className="text-xl font-medium text-white mb-4 px-4 py-2">Playlist</h3>
+                  <ul className="divide-y divide-gray-600">
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 1
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 2
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 3
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 4
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 5
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 6
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 7
+                      </a>
+                    </li>
+                    <li className="py-2 px-4">
+                      <a href="#" className="text-white hover:text-gray-100">
+                        Video 8
+                      </a>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+                  </ul>
                 </div>
               </div>
             </div>
