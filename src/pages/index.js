@@ -7,6 +7,8 @@ import TechStack from '../Components/TechStack';
 
 import { useState, useRef, useEffect } from 'react';
 
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
 export default function Home() {
 
   return (
@@ -23,11 +25,26 @@ export default function Home() {
 
         <Nav />
         <Blob />
-        <Name />
-        <Intro />
-        <TechStack />
 
 
+        <Parallax pages={5} >
+
+          <ParallaxLayer>
+            <Name />
+          </ParallaxLayer>
+
+
+          <ParallaxLayer offset={1} speed={.5}>
+            <Intro />
+          </ParallaxLayer>
+
+
+          <ParallaxLayer offset={2} factor={4} speed={0.2}>
+            <TechStack />
+          </ParallaxLayer>
+
+
+        </Parallax>
 
 
 
