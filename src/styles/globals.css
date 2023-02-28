@@ -72,3 +72,14 @@ h1 {
     z-index: 2;
     backdrop-filter: blur(200px);
 } */
+
+@media (min-width: 1024px) {
+    .flex-wrap {
+        margin: 0 -20px;
+    }
+
+    .w-full,
+    .w-1/2 {
+        flex-basis: calc(50% - 40px);
+    }
+}
