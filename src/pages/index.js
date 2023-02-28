@@ -43,10 +43,22 @@ export default function Home() {
             <Projects />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={3} factor={1} speed={1}>
+          <ParallaxLayer offset={3} factor={1} speed={.5}>
             <TechStack />
           </ParallaxLayer>
 
+          <ParallaxLayer offset={4}>
+
+            <div>
+              <h2 className="text-3xl text-center text-white mb-12">My youtube channel</h2>
+              <div className="grid grid-cols-12 gap-4 mx-2">
+                <div className='col-span-12 w-full md:col-span-8 bg-white'>
+                  <iframe className='w-full h-80 md:h-96 lg:h-[34rem] rounded-none' src="https://www.youtube.com/embed/UgIwjLg4ONk" title="The Parallax Effect // 5 Minute WebDev Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+          </ParallaxLayer>
 
         </Parallax>
 
