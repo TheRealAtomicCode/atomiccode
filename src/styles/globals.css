@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -16,9 +18,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-    font-family: "Space Mono", monospace;
+    font-family: 'Space Mono', monospace;
 }
-
 
 
 @keyframes rotation {

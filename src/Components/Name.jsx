@@ -4,7 +4,7 @@ export default function Name() {
 
     const [name, setName] = useState('ATOMIC CODE');
 
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_-';
     const ATOMICCODE = 'ATOMIC CODE';
 
     const changeName = () => {
@@ -18,7 +18,7 @@ export default function Name() {
                         return ATOMICCODE[index];
                     }
 
-                    return letters[Math.floor(Math.random() * 26)];
+                    return letters[Math.floor(Math.random() * 48)];
                 })
                 .join('');
             setName(word);
@@ -26,14 +26,14 @@ export default function Name() {
             if (iterations >= ATOMICCODE.length) clearInterval(interval);
 
             iterations += 1;
-        }, 30);
+        }, 40);
 
     };
 
     return (
         <>
             <div className='flex h-screen items-center justify-center'>
-                <h1 onMouseOver={changeName} className='text-white text-4xl z-10'>{name}</h1>
+                <h1 onMouseOver={changeName} className='text-white text-[4rem] sm:text-[6rem]  z-10'>{name}</h1>
             </div>
         </>
     );
