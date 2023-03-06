@@ -25,9 +25,7 @@ export default function Home() {
 
       <main style={{ overflow: 'clip' }}>
 
-        <Nav />
         <Blob />
-
 
         <Parallax pages={5} >
 
@@ -35,8 +33,8 @@ export default function Home() {
             <Name />
           </ParallaxLayer>
 
-
-          <ParallaxLayer offset={1} speed={.2}>
+          <ParallaxLayer offset={1} speed={.5
+          }>
             <Intro />
           </ParallaxLayer>
 
@@ -48,15 +46,22 @@ export default function Home() {
             <TechStack />
           </ParallaxLayer>
 
-          <ParallaxLayer offset={4}>
+          <ParallaxLayer offset={4} factor={2} speed={.2}>
             <Youtube />
           </ParallaxLayer>
 
+          <div className="absolute z-10 bg-opacity-0 bg-black bottom-0 h-36 text-2xl text-white w-[100%]">
+            <ul className='flex justify-center py-2 px-4'>
+              <li className='mx-4 cursor-pointer'>aqbaghi@atomiccode.uk</li>
+              <li className='mx-4 cursor-pointer'>+218 92 484 3238</li>
+            </ul>
+          </div>
         </Parallax>
 
 
 
       </main>
+
     </>
   );
 }
